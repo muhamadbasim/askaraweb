@@ -1,0 +1,27 @@
+{
+  "name": "askaraweb",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck",
+    "cf:deploy": "npm run build && wrangler pages deploy dist --project-name askaraweb"
+  },
+  "dependencies": {
+    "@nuxtjs/google-fonts": "latest",
+    "gsap": "latest",
+    "nuxt": "latest",
+    "three": "latest",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "vue-tsc": "^3.3.6",
+    "wrangler": "latest"
+  }
+}
