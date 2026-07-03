@@ -162,6 +162,7 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
 .glass-card {
   position: absolute;
   inset: 0;
+  z-index: 2;
   border-radius: 32px;
   overflow: hidden;
   transform: perspective(1200px) rotateY(-8deg) rotateX(3deg);
@@ -174,7 +175,7 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   background: linear-gradient(135deg, #f7fbfc, #e7f5f5);
 }
 .glass-card__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.05), rgba(18,175,164,.2)); }
-.diagonal { position: absolute; right: -8%; bottom: -10%; transform: skewX(-28deg); pointer-events: none; }
+.diagonal { position: absolute; z-index: 1; right: -8%; bottom: -10%; transform: skewX(-28deg); pointer-events: none; }
 .diagonal--navy { width: 52%; height: 42%; background: rgba(7, 27, 58, .92); }
 .diagonal--teal { right: 22%; width: 10%; height: 46%; background: var(--askara-teal); }
 
