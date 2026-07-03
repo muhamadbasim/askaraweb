@@ -285,3 +285,37 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
     transition-duration: 0.01ms !important;
   }
 }
+
+.error-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(18, 175, 164, .16), transparent 28%),
+    linear-gradient(135deg, #f7fafc, #eaf3f5);
+}
+.error-card {
+  width: min(720px, 100%);
+  padding: clamp(28px, 6vw, 56px);
+  border-radius: 32px;
+  background: rgba(255,255,255,.9);
+  box-shadow: 0 24px 80px rgba(3, 17, 38, .14);
+}
+.error-card__brand { margin-bottom: 44px; }
+.error-card h1 {
+  font-size: clamp(2.4rem, 7vw, 5.6rem);
+  letter-spacing: -.06em;
+}
+.error-card__copy,
+.error-card__hint {
+  color: rgba(21, 36, 58, .78);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+.error-card__hint {
+  padding: 16px 18px;
+  border-left: 4px solid var(--askara-teal);
+  border-radius: 14px;
+  background: rgba(18, 175, 164, .08);
+}
