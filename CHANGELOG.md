@@ -13,6 +13,7 @@ All notable Askara Web changes are tracked here. Version changes follow SemVer w
 - Hardened scroll-reveal behavior so section content remains visible by default and animates progressively when scrolled into view.
 - Improved mobile headline sizing to avoid edge clipping on narrow devices.
 - Loaded executive portrait assets eagerly so visual proof/full-page captures include team imagery reliably.
+- Corrected the phone CTA `tel:` link while keeping the formatted phone label readable.
 - Captured desktop, tablet, and mobile responsive QA screenshots for visual proof.
 
 ### Verified
