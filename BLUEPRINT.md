@@ -323,8 +323,5 @@ Saat menyelesaikan task, laporan minimal berisi:
 
 1. Refactor data arrays dari `index.vue` ke `app/data/`.
 2. Refactor section besar ke `app/components/sections/`.
-3. Mulai Phase 3 motion layer:
-   - headline stagger reveal,
-   - section/card scroll reveal,
-   - timeline progress polish,
-   - reduced-motion hardening.
+3. Review Phase 3 motion layer in browser across desktop/mobile and continue polish if needed.
+4. Prepare Phase 4 optional decorative WebGL/Three.js layer only if performance and accessibility remain healthy.

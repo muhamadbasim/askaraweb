@@ -24,7 +24,7 @@ Askara Web menggunakan stack modern berbasis **Nuxt 4, Vue 3, TypeScript, dan Cl
 | Font loading | `@nuxtjs/google-fonts` | Active |
 | Heading font | Montserrat | Active |
 | Body font | Inter | Active |
-| Motion safety | `prefers-reduced-motion` CSS guard | Partial |
+| Motion safety | `prefers-reduced-motion` CSS guard + GSAP runtime guard | Active |
 
 Token brand utama:
 
@@ -44,16 +44,17 @@ Token brand utama:
 
 | Teknologi | Status | Penggunaan yang Direkomendasikan |
 |---|---|---|
-| CSS transitions/animations | Active/basic | Hover lift, reveal ringan, diagonal accents |
-| GSAP | Installed | Scroll reveal, stagger headline, timeline animation |
+| CSS transitions/animations | Active | Hover lift, nav underline, timeline accent, diagonal accents |
+| GSAP | Active | Hero stagger, reveal tweens, decorative wave drift |
+| IntersectionObserver | Active | Scroll reveal trigger without blocking semantic content |
 | Three.js | Installed | Optional decorative hero/background only |
 
 Rules:
 
 - Jangan membuat website canvas-only.
-- GSAP dipakai setelah konten semantic lengkap.
+- GSAP dipakai setelah konten semantic lengkap untuk progressive enhancement.
 - Three.js harus lazy-loaded client-side jika digunakan.
-- Semua motion harus punya fallback/reduced-motion behavior.
+- Semua motion harus punya fallback/reduced-motion behavior via CSS media query dan runtime `matchMedia` guard.
 
 ## 5. Deployment & Hosting
 

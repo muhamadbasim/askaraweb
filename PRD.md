@@ -130,9 +130,9 @@ Metodologi 5 tahap:
 | FR-009 | Team section | Medium | Done |
 | FR-010 | Contact section dengan email, telepon, website, alamat | High | Done |
 | FR-011 | Error/recovery page untuk stale chunk/cache issue | Medium | Done |
-| FR-012 | Motion layer untuk entrance, scroll reveal, hover states | Medium | Pending |
+| FR-012 | Motion layer untuk entrance, scroll reveal, hover states | Medium | Done |
 | FR-013 | Optional decorative Three.js/WebGL layer | Low | Pending |
-| FR-014 | Reduced-motion fallback | High | Partial |
+| FR-014 | Reduced-motion fallback | High | Done |
 | FR-015 | SEO metadata dasar | High | Done |
 
 ## 7. Kebutuhan Non-Fungsional

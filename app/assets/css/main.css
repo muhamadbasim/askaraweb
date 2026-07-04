@@ -91,8 +91,26 @@ button:focus-visible {
   font-weight: 700;
   color: var(--askara-navy);
 }
-.topbar__links a { opacity: 0.78; transition: opacity .2s ease, color .2s ease; }
+.topbar__links a {
+  position: relative;
+  opacity: 0.78;
+  transition: opacity .2s ease, color .2s ease;
+}
+.topbar__links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--askara-teal);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .22s ease;
+}
 .topbar__links a:hover { opacity: 1; color: var(--askara-teal); }
+.topbar__links a:hover::after { transform: scaleX(1); }
 
 .hero { min-height: calc(100vh - 48px); }
 .hero__backdrop { position: absolute; inset: 0; pointer-events: none; }
@@ -138,7 +156,7 @@ h1 {
   letter-spacing: -0.065em;
   text-transform: uppercase;
 }
-h1 span { display: block; }
+h1 span { display: block; will-change: transform, opacity; }
 h1 span:nth-child(2) { color: var(--askara-teal); }
 .hero__lead, .section-copy {
   max-width: 660px;
@@ -176,6 +194,11 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   overflow: hidden;
   transform: perspective(1200px) rotateY(-8deg) rotateX(3deg);
   box-shadow: 0 34px 100px rgba(3, 17, 38, .22);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.hero__visual:hover .glass-card {
+  transform: perspective(1200px) rotateY(-4deg) rotateX(2deg) translateY(-6px);
+  box-shadow: 0 40px 110px rgba(3, 17, 38, .27);
 }
 .glass-card img {
   width: 100%;
@@ -205,6 +228,7 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   margin-top: 18px;
   border-radius: 999px;
   background: var(--askara-teal);
+  transform-origin: left center;
 }
 .section-heading--dark h2 { color: white; }
 .section-heading--dark h2 em { color: var(--askara-teal-bright); }
@@ -253,9 +277,14 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   padding: 24px;
   background: rgba(255,255,255,.82);
   box-shadow: 0 16px 40px rgba(3, 17, 38, .06);
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+  will-change: transform;
 }
-.feature-card:hover, .service-card:hover, .value-card:hover, .team-card:hover { transform: translateY(-4px); box-shadow: 0 22px 55px rgba(3,17,38,.12); }
+.feature-card:hover, .service-card:hover, .value-card:hover, .team-card:hover {
+  border-color: rgba(18, 175, 164, .24);
+  transform: translateY(-6px);
+  box-shadow: 0 22px 55px rgba(3,17,38,.12);
+}
 .feature-card__icon, .service-card__icon, .value-card__icon, .vision-card__icon {
   display: inline-grid;
   width: 54px;
@@ -281,6 +310,7 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
     linear-gradient(135deg, transparent 40%, rgba(25,199,183,.28), transparent 62%);
   transform: rotate(-8deg);
   pointer-events: none;
+  will-change: transform;
 }
 .digital-wave--approach { left: -8%; right: auto; bottom: -22%; transform: rotate(7deg); }
 .vision__grid {
@@ -345,6 +375,16 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   padding: 0;
   list-style: none;
 }
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  opacity: .32;
+  background: linear-gradient(90deg, var(--askara-teal-bright), transparent);
+}
 .timeline__item {
   position: relative;
   min-height: 220px;
@@ -352,7 +392,19 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 24px;
   background: rgba(255,255,255,.06);
+  overflow: hidden;
 }
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--askara-teal-bright);
+  transform: scaleY(.18);
+  transform-origin: top center;
+  transition: transform .28s ease;
+}
+.timeline__item:hover::before { transform: scaleY(1); }
 .timeline__number { color: var(--askara-teal-bright); font: 800 2rem/1 var(--font-heading); }
 .timeline__item h3 { text-transform: uppercase; }
 .timeline__item p { color: rgba(255,255,255,.76); line-height: 1.65; }
