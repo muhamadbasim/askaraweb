@@ -15,6 +15,11 @@ function resolveBuildId() {
 }
 
 const buildId = resolveBuildId()
+const siteUrl = 'https://askara.basim.id'
+const siteTitle = 'Askara Digital Technology'
+const siteDescription =
+  'PT Askara Digital Technology helps organizations innovate, transform, and grow through intelligent digital solutions.'
+const ogImage = `${siteUrl}/images/brand/og-askara.jpg`
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-07-03',
@@ -34,22 +39,33 @@ export default defineNuxtConfig({
   app: {
     buildAssetsDir: `/_nuxt/${buildId}/`,
     head: {
-      title: 'Askara Digital Technology',
+      title: siteTitle,
       htmlAttrs: { lang: 'en' },
+      link: [
+        { rel: 'canonical', href: siteUrl },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/images/brand/favicon-32.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/brand/apple-touch-icon.png' },
+      ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          name: 'description',
-          content:
-            'PT Askara Digital Technology helps organizations innovate, transform, and grow through intelligent digital solutions.',
-        },
-        { property: 'og:title', content: 'Askara Digital Technology' },
-        {
-          property: 'og:description',
-          content:
-            'Innovate. Transform. Accelerate. Company profile website for PT Askara Digital Technology.',
-        },
+        { name: 'description', content: siteDescription },
+        { name: 'theme-color', content: '#071B3A' },
+        { name: 'application-name', content: siteTitle },
+        { property: 'og:site_name', content: siteTitle },
+        { property: 'og:title', content: siteTitle },
+        { property: 'og:description', content: siteDescription },
         { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: siteUrl },
+        { property: 'og:image', content: ogImage },
+        { property: 'og:image:secure_url', content: ogImage },
+        { property: 'og:image:type', content: 'image/jpeg' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:image:alt', content: 'Askara Digital Technology — Innovate. Transform. Accelerate.' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: siteTitle },
+        { name: 'twitter:description', content: siteDescription },
+        { name: 'twitter:image', content: ogImage },
       ],
     },
   },
