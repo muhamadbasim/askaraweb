@@ -219,7 +219,13 @@ Sebelum menambah library baru, cek:
 4. Apakah accessible dan punya reduced-motion strategy?
 5. Apakah perlu dicatat di `TECHSTACK.md` dan PRD?
 
-## 14. Environment Notes
+## 14. Versioning & Release Notes
+
+- Current version is tracked in `package.json`, `package-lock.json`, `app/data/release.ts`, and `CHANGELOG.md`.
+- Every meaningful Askara web change should bump the version, update `CHANGELOG.md`, commit, push to GitHub, and deploy/verify Cloudflare Pages.
+- Visible site version is rendered subtly in the contact section from `app/data/release.ts`.
+
+## 15. Environment Notes
 
 Local workspace:
 

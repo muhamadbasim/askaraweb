@@ -13,10 +13,12 @@
       <a :href="`mailto:${companyContact.email}`">{{ companyContact.email }}</a>
       <a :href="companyContact.phoneHref">{{ companyContact.phone }}</a>
       <a :href="companyContact.websiteHref">{{ companyContact.website }}</a>
+      <span class="release-badge">v{{ release.version }} · {{ release.codename }}</span>
     </address>
   </section>
 </template>
 
 <script setup lang="ts">
 import { companyContact } from '~/data/company'
+import { release } from '~/data/release'
 </script>

@@ -522,6 +522,19 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
 .contact-card a { color: white; font-weight: 800; }
 .contact-card span { color: rgba(255,255,255,.72); }
 .contact-card span:first-child { color: white; font-weight: 800; }
+.release-badge {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(25, 199, 183, .28);
+  border-radius: 999px;
+  color: rgba(255,255,255,.78) !important;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  background: rgba(18, 175, 164, .10);
+}
 
 @media (max-width: 1020px) {
   .topbar { align-items: flex-start; flex-direction: column; }

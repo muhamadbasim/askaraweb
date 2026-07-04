@@ -1,5 +1,9 @@
 # Askara Web
 
+Current version: **v0.2.0** — Phase 4 WebGL Hero
+
+See [`CHANGELOG.md`](./CHANGELOG.md) for release history.
+
 Interactive corporate website project for **PT Askara Digital Technology**.
 
 ## Current Status
