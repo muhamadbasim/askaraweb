@@ -155,7 +155,9 @@
       </div>
       <div class="team-grid">
         <article v-for="member in team" :key="member.name" class="team-card">
-          <div class="team-card__avatar" aria-hidden="true">{{ member.initials }}</div>
+          <figure class="team-card__photo-frame">
+            <img class="team-card__photo" :src="member.image" :alt="`${member.name}, ${member.role}`" loading="lazy" />
+          </figure>
           <p class="eyebrow">{{ member.role }}</p>
           <h3>{{ member.name }}</h3>
           <span class="team-card__link" aria-label="LinkedIn profile slot">
@@ -340,8 +342,8 @@ const values = [
 ]
 
 const team = [
-  { name: 'Putri Diana Oktavia', role: 'CEO', initials: 'PD' },
-  { name: 'Muhamad Basim', role: 'CTO', initials: 'MB' },
-  { name: 'Firman Febryan', role: 'COO', initials: 'FF' },
+  { name: 'Putri Diana Oktavia', role: 'CEO', image: '/images/team/putri-diana-oktavia.jpg' },
+  { name: 'Muhamad Basim', role: 'CTO', image: '/images/team/muhamad-basim.jpg' },
+  { name: 'Firman Febryan', role: 'COO', image: '/images/team/firman-febryan.jpg' },
 ]
 </script>
