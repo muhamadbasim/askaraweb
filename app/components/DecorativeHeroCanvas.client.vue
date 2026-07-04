@@ -25,7 +25,13 @@ let particles: Points<BufferGeometry> | undefined
 let gridLines: LineSegments<BufferGeometry> | undefined
 let frameId = 0
 let cleanupResize: (() => void) | undefined
+let cleanupDeferredStart: (() => void) | undefined
 let disposed = false
+
+type WindowWithIdleCallback = Window & {
+  requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number
+  cancelIdleCallback?: (handle: number) => void
+}
 
 function supportsWebGL() {
   try {
@@ -39,6 +45,67 @@ function supportsWebGL() {
   }
 }
 
+function waitForInitialContent(canvas: HTMLCanvasElement) {
+  return new Promise<boolean>((resolve) => {
+    const prefersCompactViewport = window.matchMedia('(max-width: 760px)').matches
+    if (prefersCompactViewport) {
+      resolve(false)
+      return
+    }
+
+    let settled = false
+
+    const settle = (shouldStart: boolean) => {
+      if (settled) return
+      settled = true
+      cleanupDeferredStart?.()
+      cleanupDeferredStart = undefined
+      resolve(shouldStart)
+    }
+
+    const scheduleIdleStart = () => {
+      if (disposed) {
+        settle(false)
+        return
+      }
+
+      const fallbackHandle = window.setTimeout(() => settle(true), 1000)
+      const idleWindow = window as WindowWithIdleCallback
+
+      if (idleWindow.requestIdleCallback) {
+        const idleHandle = idleWindow.requestIdleCallback(
+          () => settle(true),
+          { timeout: 1400 },
+        )
+
+        cleanupDeferredStart = () => {
+          window.clearTimeout(fallbackHandle)
+          idleWindow.cancelIdleCallback?.(idleHandle)
+        }
+      } else {
+        cleanupDeferredStart = () => window.clearTimeout(fallbackHandle)
+      }
+    }
+
+    if (!('IntersectionObserver' in window)) {
+      scheduleIdleStart()
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return
+        observer.disconnect()
+        scheduleIdleStart()
+      },
+      { rootMargin: '160px', threshold: 0.01 },
+    )
+
+    observer.observe(canvas)
+    cleanupDeferredStart = () => observer.disconnect()
+  })
+}
+
 onMounted(async () => {
   if (!import.meta.client) return
 
@@ -47,6 +114,12 @@ onMounted(async () => {
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   if (prefersReducedMotion || !supportsWebGL()) {
+    canvas.remove()
+    return
+  }
+
+  const shouldStartWebGL = await waitForInitialContent(canvas)
+  if (!shouldStartWebGL || disposed) {
     canvas.remove()
     return
   }
@@ -192,6 +265,7 @@ onMounted(async () => {
 onUnmounted(() => {
   disposed = true
   if (frameId) window.cancelAnimationFrame(frameId)
+  cleanupDeferredStart?.()
   cleanupResize?.()
 
   particles?.geometry.dispose()

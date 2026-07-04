@@ -1,6 +1,6 @@
 export const release = {
-  version: '0.2.0',
-  codename: 'Phase 4 WebGL Hero',
+  version: '0.2.1',
+  codename: 'Performance Polish',
   date: '2026-07-05',
-  summary: 'Premium decorative WebGL hero layer with semantic content, reduced-motion guard, and Cloudflare Pages deployment.',
+  summary: 'Deferred decorative WebGL startup so core Askara content remains the first priority on page load.',
 } as const

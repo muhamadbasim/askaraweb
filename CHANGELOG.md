@@ -6,6 +6,20 @@ All notable Askara Web changes are tracked here. Version changes follow SemVer w
 - **Minor**: new visible feature, new phase, or substantial enhancement.
 - **Patch**: bug fix, copy polish, metadata, or small visual refinement.
 
+## v0.2.1 — 2026-07-05
+
+### Changed
+
+- Deferred decorative Three.js startup until the hero canvas is near viewport and the browser is idle or reaches a safe timeout.
+- Skipped WebGL decoration on compact mobile viewports to keep mobile page load lighter.
+- Updated release metadata and visible version badge to `v0.2.1 · Performance Polish`.
+
+### Verified
+
+- `npm run typecheck` passed.
+- `npm run build` passed.
+- Browser smoke verified no console errors and the release badge renders correctly.
+
 ## v0.2.0 — 2026-07-05
 
 ### Added

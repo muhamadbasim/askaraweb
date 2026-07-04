@@ -1,6 +1,6 @@
 # Askara Web
 
-Current version: **v0.2.0** — Phase 4 WebGL Hero
+Current version: **v0.2.1** — Performance Polish
 
 See [`CHANGELOG.md`](./CHANGELOG.md) for release history.
 

@@ -53,9 +53,9 @@ Rules:
 
 - Jangan membuat website canvas-only.
 - GSAP dipakai setelah konten semantic lengkap untuk progressive enhancement.
-- Three.js harus lazy-loaded client-side jika digunakan.
+- Three.js harus lazy-loaded client-side jika digunakan, dan dekorasi hero ditunda sampai konten awal masuk viewport + browser idle/timeout.
 - Semua motion harus punya fallback/reduced-motion behavior via CSS media query dan runtime `matchMedia` guard.
-- Canvas/WebGL bersifat dekoratif (`aria-hidden`) dan harus di-skip ketika WebGL tidak tersedia.
+- Canvas/WebGL bersifat dekoratif (`aria-hidden`) dan harus di-skip ketika WebGL tidak tersedia, viewport mobile ringkas, atau reduced-motion aktif.
 
 ## 5. Deployment & Hosting
 
