@@ -321,7 +321,6 @@ Saat menyelesaikan task, laporan minimal berisi:
 
 ## 13. Next Recommended Work
 
-1. Refactor data arrays dari `index.vue` ke `app/data/`.
-2. Refactor section besar ke `app/components/sections/`.
-3. Review Phase 3 motion layer in browser across desktop/mobile and continue polish if needed.
-4. Prepare Phase 4 optional decorative WebGL/Three.js layer only if performance and accessibility remain healthy.
+1. Refactor section besar ke `app/components/sections/`.
+2. Review Phase 3 motion layer in browser across desktop/mobile and continue polish if needed.
+3. Prepare Phase 4 optional decorative WebGL/Three.js layer only if performance and accessibility remain healthy.

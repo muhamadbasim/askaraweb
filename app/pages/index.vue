@@ -176,11 +176,11 @@
         </p>
       </div>
       <address class="contact-card">
-        <span>Deruzzi SPACE</span>
-        <span>Jl. Sukajadi 25, Sukajadi, Jawa Barat 40162</span>
-        <a href="mailto:info@askaradigital.com">info@askaradigital.com</a>
-        <a href="tel:+6282258112280">0822-5811-2280</a>
-        <a href="https://www.askaradigital.com">www.askaradigital.com</a>
+        <span>{{ companyContact.location }}</span>
+        <span>{{ companyContact.address }}</span>
+        <a :href="`mailto:${companyContact.email}`">{{ companyContact.email }}</a>
+        <a :href="companyContact.phoneHref">{{ companyContact.phone }}</a>
+        <a :href="companyContact.websiteHref">{{ companyContact.website }}</a>
       </address>
     </section>
   </main>
@@ -188,6 +188,7 @@
 
 <script setup lang="ts">
 import { gsap } from 'gsap'
+import { approach, companyContact, features, missions, services, team, values } from '~/data/company'
 
 let motionContext: gsap.Context | undefined
 let sectionObserver: IntersectionObserver | undefined
@@ -263,87 +264,4 @@ onUnmounted(() => {
   motionContext?.revert()
 })
 
-const features = [
-  { title: 'Business-Oriented', icon: '▣' },
-  { title: 'Experienced Team', icon: '◇' },
-  { title: 'Scalable Architecture', icon: '▤' },
-  { title: 'AI-Driven Innovation', icon: '✦' },
-]
-
-const missions = [
-  'Deliver innovative and reliable digital solutions.',
-  'Empower businesses through technology and data.',
-  'Build long-term partnerships based on trust and value.',
-  'Continuously innovate to create sustainable growth.',
-]
-
-const services = [
-  {
-    title: 'Enterprise Software Development',
-    icon: '</>',
-    description: 'Custom software solutions to drive innovation and growth.',
-  },
-  {
-    title: 'Web & Mobile Apps',
-    icon: '▱',
-    description: 'Scalable and intuitive applications built for exceptional user experiences.',
-  },
-  {
-    title: 'AI & Automation',
-    icon: 'AI',
-    description: 'Intelligent automation to optimize processes and accelerate results.',
-  },
-  {
-    title: 'Cloud Infrastructure',
-    icon: '☁',
-    description: 'Secure, scalable, and reliable cloud solutions that power your business.',
-  },
-  {
-    title: 'Data & Business Intelligence',
-    icon: '↗',
-    description: 'Transform data into actionable insights to make smarter business decisions.',
-  },
-  {
-    title: 'IT Consulting',
-    icon: '◎',
-    description: 'Strategic advisory and technology consulting to achieve your goals.',
-  },
-]
-
-const approach = [
-  { number: '01', title: 'Discover', description: 'Understand business needs and challenges.' },
-  { number: '02', title: 'Design', description: 'Craft the right solution and user experience.' },
-  { number: '03', title: 'Develop', description: 'Build with quality, agility, and best practices.' },
-  { number: '04', title: 'Deliver', description: 'Implement solutions that drive real impact.' },
-  { number: '05', title: 'Support', description: 'Provide ongoing optimization and support.' },
-]
-
-const values = [
-  {
-    title: 'Collaboration',
-    icon: '◎',
-    description: 'We believe in the power of teamwork and strong partnerships.',
-  },
-  {
-    title: 'Innovation',
-    icon: '✦',
-    description: 'We continuously explore new ideas to deliver better solutions.',
-  },
-  {
-    title: 'Integrity',
-    icon: '◇',
-    description: 'We act with honesty, transparency, and responsibility.',
-  },
-  {
-    title: 'Excellence',
-    icon: '▣',
-    description: 'We are committed to delivering the highest quality in everything we do.',
-  },
-]
-
-const team = [
-  { name: 'Putri Diana Oktavia', role: 'CEO', image: '/images/team/putri-diana-oktavia.jpg' },
-  { name: 'Muhamad Basim', role: 'CTO', image: '/images/team/muhamad-basim.jpg' },
-  { name: 'Firman Febryan', role: 'COO', image: '/images/team/firman-febryan.jpg' },
-]
 </script>
