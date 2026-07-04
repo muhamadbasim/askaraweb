@@ -108,20 +108,21 @@ Target urutan section:
 7. `TeamSection`
 8. `ContactSection`
 
-Saat ini `index.vue` sudah memiliki:
+Saat ini `index.vue` sudah memiliki static semantic company profile lengkap:
 
 - Hero
-- About
+- About + quote box
+- Vision & Mission
 - Services
 - Approach
-- Contact
-
-Yang masih perlu ditambahkan untuk melengkapi company profile:
-
-- Vision & Mission
 - Values
 - Team
-- Quote box pada About
+- Contact
+
+Catatan refactor berikutnya:
+
+- Pecah section besar dari `index.vue` ke `app/components/sections/`.
+- Pindahkan data arrays ke `app/data/` saat konten mulai sering berubah.
 
 ## 6. Data Model
 
@@ -320,11 +321,10 @@ Saat menyelesaikan task, laporan minimal berisi:
 
 ## 13. Next Recommended Work
 
-1. Lengkapi Phase 2 semantic website:
-   - Vision & Mission
-   - Values
-   - Team
-   - About quote box
-2. Refactor data arrays dari `index.vue` ke `app/data/`.
-3. Refactor section besar ke components.
-4. Tambahkan motion layer bertahap setelah konten lengkap.
+1. Refactor data arrays dari `index.vue` ke `app/data/`.
+2. Refactor section besar ke `app/components/sections/`.
+3. Mulai Phase 3 motion layer:
+   - headline stagger reveal,
+   - section/card scroll reveal,
+   - timeline progress polish,
+   - reduced-motion hardening.

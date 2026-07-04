@@ -119,15 +119,15 @@ Metodologi 5 tahap:
 
 | ID | Requirement | Prioritas | Status |
 |---|---|---:|---|
-| FR-001 | Website memiliki struktur single-page company profile | High | In progress |
+| FR-001 | Website memiliki struktur single-page company profile | High | Done |
 | FR-002 | Navigasi anchor ke Services, Approach, Contact | High | Done |
 | FR-003 | Hero menampilkan brand, headline, CTA, dan visual utama | High | Done |
-| FR-004 | About section dengan copy dan feature cards | High | Partial |
+| FR-004 | About section dengan copy, quote box, dan feature cards | High | Done |
 | FR-005 | Services section dengan 6 service cards | High | Done |
 | FR-006 | Approach section dengan 5-step methodology | High | Done |
-| FR-007 | Vision & Mission section | High | Pending |
-| FR-008 | Values section | Medium | Pending |
-| FR-009 | Team section | Medium | Pending |
+| FR-007 | Vision & Mission section | High | Done |
+| FR-008 | Values section | Medium | Done |
+| FR-009 | Team section | Medium | Done |
 | FR-010 | Contact section dengan email, telepon, website, alamat | High | Done |
 | FR-011 | Error/recovery page untuk stale chunk/cache issue | Medium | Done |
 | FR-012 | Motion layer untuk entrance, scroll reveal, hover states | Medium | Pending |

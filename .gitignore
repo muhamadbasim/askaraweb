@@ -9,6 +9,9 @@ dist
 # Dependencies
 node_modules
 
+# Local tooling
+.wrangler
+
 # Logs
 *.log
 npm-debug.log*

@@ -16,8 +16,12 @@
           </span>
         </a>
         <div class="topbar__links">
+          <a href="#about">About</a>
+          <a href="#vision">Vision</a>
           <a href="#services">Services</a>
           <a href="#approach">Approach</a>
+          <a href="#values">Values</a>
+          <a href="#team">Team</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -51,19 +55,52 @@
       </div>
     </section>
 
-    <section class="about section-frame" aria-labelledby="about-title">
+    <section id="about" class="about section-frame" aria-labelledby="about-title">
       <div class="section-heading">
         <p class="eyebrow">About Us</p>
         <h2 id="about-title"><span>About</span> <em>Us</em></h2>
       </div>
-      <p class="section-copy">
-        PT Askara Digital Technology is a technology partner dedicated to delivering intelligent
-        digital solutions that help organizations innovate, transform, and grow in the digital era.
-      </p>
-      <div class="feature-grid" aria-label="Askara strengths">
-        <article v-for="feature in features" :key="feature.title" class="feature-card">
-          <span class="feature-card__icon" aria-hidden="true">{{ feature.icon }}</span>
-          <h3>{{ feature.title }}</h3>
+      <div class="about__layout">
+        <div>
+          <p class="section-copy">
+            PT Askara Digital Technology is a technology partner dedicated to delivering intelligent
+            digital solutions that help organizations innovate, transform, and grow in the digital era.
+          </p>
+          <blockquote class="quote-card">
+            <p>We bridge technology and business to create sustainable value and long-term impact.</p>
+          </blockquote>
+        </div>
+        <div class="feature-grid" aria-label="Askara strengths">
+          <article v-for="feature in features" :key="feature.title" class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">{{ feature.icon }}</span>
+            <h3>{{ feature.title }}</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="vision section-frame section-frame--dark" aria-labelledby="vision-title">
+      <span class="digital-wave" aria-hidden="true" />
+      <div class="section-heading section-heading--dark">
+        <p class="eyebrow">Vision & Mission</p>
+        <h2 id="vision-title"><span>Purposeful</span> <em>Innovation</em></h2>
+      </div>
+      <div class="vision__grid">
+        <article class="vision-card vision-card--primary">
+          <span class="vision-card__icon" aria-hidden="true">✦</span>
+          <p class="eyebrow">Our Vision</p>
+          <h3>Leading digital technology partner</h3>
+          <p>
+            To be a leading digital technology partner recognized for innovation,
+            excellence, and measurable impact.
+          </p>
+        </article>
+        <article class="vision-card">
+          <span class="vision-card__icon" aria-hidden="true">▤</span>
+          <p class="eyebrow">Our Mission</p>
+          <ul class="mission-list">
+            <li v-for="mission in missions" :key="mission">{{ mission }}</li>
+          </ul>
         </article>
       </div>
     </section>
@@ -83,6 +120,7 @@
     </section>
 
     <section id="approach" class="approach section-frame section-frame--dark" aria-labelledby="approach-title">
+      <span class="digital-wave digital-wave--approach" aria-hidden="true" />
       <div class="section-heading section-heading--dark">
         <p class="eyebrow">Our Approach</p>
         <h2 id="approach-title"><span>Proven</span> <em>Methodology</em></h2>
@@ -96,6 +134,37 @@
       </ol>
     </section>
 
+    <section id="values" class="values section-frame section-frame--light" aria-labelledby="values-title">
+      <div class="section-heading">
+        <p class="eyebrow">Our Values</p>
+        <h2 id="values-title"><span>How we</span> <em>work</em></h2>
+      </div>
+      <div class="value-grid">
+        <article v-for="value in values" :key="value.title" class="value-card">
+          <span class="value-card__icon" aria-hidden="true">{{ value.icon }}</span>
+          <h3>{{ value.title }}</h3>
+          <p>{{ value.description }}</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="team" class="team section-frame" aria-labelledby="team-title">
+      <div class="section-heading">
+        <p class="eyebrow">Our Team</p>
+        <h2 id="team-title"><span>Leadership</span> <em>Team</em></h2>
+      </div>
+      <div class="team-grid">
+        <article v-for="member in team" :key="member.name" class="team-card">
+          <div class="team-card__avatar" aria-hidden="true">{{ member.initials }}</div>
+          <p class="eyebrow">{{ member.role }}</p>
+          <h3>{{ member.name }}</h3>
+          <span class="team-card__link" aria-label="LinkedIn profile slot">
+            LinkedIn slot
+          </span>
+        </article>
+      </div>
+    </section>
+
     <section id="contact" class="contact section-frame" aria-labelledby="contact-title">
       <div>
         <p class="eyebrow">Let’s Connect</p>
@@ -105,10 +174,11 @@
         </p>
       </div>
       <address class="contact-card">
+        <span>Deruzzi SPACE</span>
+        <span>Jl. Sukajadi 25, Sukajadi, Jawa Barat 40162</span>
         <a href="mailto:info@askaradigital.com">info@askaradigital.com</a>
         <a href="tel:+6282258112280">0822-5811-2280</a>
         <a href="https://www.askaradigital.com">www.askaradigital.com</a>
-        <span>Deruzzi SPACE, Jl. Sukajadi 25, Sukajadi, Jawa Barat 40162</span>
       </address>
     </section>
   </main>
@@ -120,6 +190,13 @@ const features = [
   { title: 'Experienced Team', icon: '◇' },
   { title: 'Scalable Architecture', icon: '▤' },
   { title: 'AI-Driven Innovation', icon: '✦' },
+]
+
+const missions = [
+  'Deliver innovative and reliable digital solutions.',
+  'Empower businesses through technology and data.',
+  'Build long-term partnerships based on trust and value.',
+  'Continuously innovate to create sustainable growth.',
 ]
 
 const services = [
@@ -161,5 +238,34 @@ const approach = [
   { number: '03', title: 'Develop', description: 'Build with quality, agility, and best practices.' },
   { number: '04', title: 'Deliver', description: 'Implement solutions that drive real impact.' },
   { number: '05', title: 'Support', description: 'Provide ongoing optimization and support.' },
+]
+
+const values = [
+  {
+    title: 'Collaboration',
+    icon: '◎',
+    description: 'We believe in the power of teamwork and strong partnerships.',
+  },
+  {
+    title: 'Innovation',
+    icon: '✦',
+    description: 'We continuously explore new ideas to deliver better solutions.',
+  },
+  {
+    title: 'Integrity',
+    icon: '◇',
+    description: 'We act with honesty, transparency, and responsibility.',
+  },
+  {
+    title: 'Excellence',
+    icon: '▣',
+    description: 'We are committed to delivering the highest quality in everything we do.',
+  },
+]
+
+const team = [
+  { name: 'Putri Diana Oktavia', role: 'CEO', initials: 'PD' },
+  { name: 'Muhamad Basim', role: 'CTO', initials: 'MB' },
+  { name: 'Firman Febryan', role: 'COO', initials: 'FF' },
 ]
 </script>
