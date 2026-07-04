@@ -47,7 +47,7 @@ Token brand utama:
 | CSS transitions/animations | Active | Hover lift, nav underline, timeline accent, diagonal accents |
 | GSAP | Active | Hero stagger, reveal tweens, decorative wave drift |
 | IntersectionObserver | Active | Scroll reveal trigger without blocking semantic content |
-| Three.js | Installed | Optional decorative hero/background only |
+| Three.js | Active | Client-only decorative hero particle/grid layer; semantic content remains primary |
 
 Rules:
 
@@ -55,6 +55,7 @@ Rules:
 - GSAP dipakai setelah konten semantic lengkap untuk progressive enhancement.
 - Three.js harus lazy-loaded client-side jika digunakan.
 - Semua motion harus punya fallback/reduced-motion behavior via CSS media query dan runtime `matchMedia` guard.
+- Canvas/WebGL bersifat dekoratif (`aria-hidden`) dan harus di-skip ketika WebGL tidak tersedia.
 
 ## 5. Deployment & Hosting
 
@@ -109,7 +110,7 @@ Current dependencies:
 | `vue-router` | Routing Vue/Nuxt |
 | `@nuxtjs/google-fonts` | Loading Inter dan Montserrat |
 | `gsap` | Motion/animation layer |
-| `three` | Optional decorative 3D/WebGL layer |
+| `three` | Client-only decorative hero 3D/WebGL layer |
 
 Current dev dependencies:
 
@@ -118,6 +119,7 @@ Current dev dependencies:
 | `typescript` | TypeScript compiler/tooling |
 | `vue-tsc` | Vue/Nuxt type checking |
 | `@types/node` | Node type definitions |
+| `@types/three` | TypeScript declarations for Three.js decorative layer |
 | `wrangler` | Cloudflare Pages deploy CLI |
 
 ## 8. Nuxt Configuration Highlights
@@ -204,7 +206,7 @@ Browser verification:
 | Vue | Keep | Component model stabil dan cocok untuk interactive UI |
 | TypeScript | Keep | Safety untuk scale fitur |
 | GSAP | Keep | Motion premium lebih mudah dan robust |
-| Three.js | Keep optional | Untuk layer decorative WebGL bila dibutuhkan |
+| Three.js | Keep active but progressive | Dipakai untuk decorative hero canvas; tetap lazy/client-only dengan reduced-motion/WebGL fallback |
 | Tailwind CSS | Not used currently | Plain CSS cukup untuk brand-specific custom design |
 
 ## 13. Adding New Technology

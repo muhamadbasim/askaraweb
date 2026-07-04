@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.1.0",
+    "@types/three": "^0.185.0",
     "typescript": "latest",
     "vue-tsc": "^3.3.6",
     "wrangler": "latest"

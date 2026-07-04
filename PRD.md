@@ -131,7 +131,7 @@ Metodologi 5 tahap:
 | FR-010 | Contact section dengan email, telepon, website, alamat | High | Done |
 | FR-011 | Error/recovery page untuk stale chunk/cache issue | Medium | Done |
 | FR-012 | Motion layer untuk entrance, scroll reveal, hover states | Medium | Done |
-| FR-013 | Optional decorative Three.js/WebGL layer | Low | Pending |
+| FR-013 | Optional decorative Three.js/WebGL layer | Low | Done |
 | FR-014 | Reduced-motion fallback | High | Done |
 | FR-015 | SEO metadata dasar | High | Done |
 
@@ -174,7 +174,7 @@ Metodologi 5 tahap:
 | Phase 1 | Foundation | Nuxt/Vue/TS scaffold, CSS token, layout awal, deploy Cloudflare |
 | Phase 2 | Static semantic website | Semua section company profile lengkap dalam HTML semantic |
 | Phase 3 | Motion layer | CSS/GSAP animations, scroll reveal, hover polish, reduced motion |
-| Phase 4 | Premium interactive layer | Optional Three.js decorative hero/background, fallback, perf QA |
+| Phase 4 | Premium interactive layer | Decorative Three.js hero background, WebGL/reduced-motion fallback, perf QA |
 | Phase 5 | QA & release hardening | Typecheck, build, browser QA, accessibility, responsive, Cloudflare checks |
 
 ## 9. Acceptance Criteria

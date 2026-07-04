@@ -4,6 +4,7 @@
       <span class="orb orb--one" />
       <span class="orb orb--two" />
       <span class="dot-grid" />
+      <DecorativeHeroCanvas />
     </div>
 
     <nav class="topbar" aria-label="Primary navigation">
@@ -54,3 +55,7 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import DecorativeHeroCanvas from '~/components/DecorativeHeroCanvas.client.vue'
+</script>

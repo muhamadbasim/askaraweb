@@ -33,6 +33,19 @@ askaraweb/
 │   ├── assets/
 │   │   └── css/
 │   │       └── main.css
+│   ├── components/
+│   │   ├── DecorativeHeroCanvas.client.vue
+│   │   └── sections/
+│   │       ├── HeroSection.vue
+│   │       ├── AboutSection.vue
+│   │       ├── VisionMissionSection.vue
+│   │       ├── ServicesSection.vue
+│   │       ├── ApproachSection.vue
+│   │       ├── ValuesSection.vue
+│   │       ├── TeamSection.vue
+│   │       └── ContactSection.vue
+│   ├── data/
+│   │   └── company.ts
 │   └── pages/
 │       └── index.vue
 ├── docs/
@@ -42,7 +55,10 @@ askaraweb/
 │   └── plans/
 │       └── interactive-animated-website.md
 ├── public/
-│   └── images/references/hero-cover.jpg
+│   └── images/
+│       ├── brand/
+│       ├── references/hero-cover.jpg
+│       └── team/
 ├── dist/                    # Generated production build output
 ├── nuxt.config.ts
 ├── package.json
@@ -108,7 +124,7 @@ Target urutan section:
 7. `TeamSection`
 8. `ContactSection`
 
-Saat ini `index.vue` sudah memiliki static semantic company profile lengkap:
+Saat ini `index.vue` hanya menjadi page composer dan static semantic company profile sudah dipisah ke section components:
 
 - Hero
 - About + quote box
@@ -119,10 +135,11 @@ Saat ini `index.vue` sudah memiliki static semantic company profile lengkap:
 - Team
 - Contact
 
-Catatan refactor berikutnya:
+Catatan implementasi terbaru:
 
-- Pecah section besar dari `index.vue` ke `app/components/sections/`.
-- Pindahkan data arrays ke `app/data/` saat konten mulai sering berubah.
+- Static content utama sudah dipindahkan ke `app/data/company.ts`.
+- Section utama sudah dipisah ke `app/components/sections/`.
+- Hero memiliki optional decorative WebGL canvas via `DecorativeHeroCanvas.client.vue`; canvas ini hanya progressive enhancement, `aria-hidden`, client-only, dan tidak aktif saat `prefers-reduced-motion` atau WebGL tidak tersedia.
 
 ## 6. Data Model
 
