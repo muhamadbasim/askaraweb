@@ -11,8 +11,8 @@
         </figure>
         <p class="eyebrow">{{ member.role }}</p>
         <h3>{{ member.name }}</h3>
-        <span class="team-card__link" aria-label="LinkedIn profile slot">
-          LinkedIn slot
+        <span class="team-card__profile-badge" aria-label="Executive profile">
+          Executive Profile
         </span>
       </article>
     </div>

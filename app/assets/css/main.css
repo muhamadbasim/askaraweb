@@ -468,14 +468,29 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
 }
 .team-card .eyebrow { margin-bottom: 8px; }
 .team-card h3 { margin: 0 0 22px; font-size: clamp(1.25rem, 2vw, 1.7rem); }
-.team-card__link {
+.team-card__profile-badge {
   position: relative;
   z-index: 2;
   display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid rgba(18, 175, 164, .2);
+  border-radius: 999px;
   color: var(--askara-teal);
   font-weight: 800;
+  letter-spacing: .04em;
+  background: rgba(18, 175, 164, .08);
 }
-.team-card__link { opacity: .72; }
+.team-card__profile-badge::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 999px;
+  background: var(--askara-teal);
+  box-shadow: 0 0 0 4px rgba(18, 175, 164, .12);
+}
 
 .contact {
   display: grid;
