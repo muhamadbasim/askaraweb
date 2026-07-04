@@ -6,6 +6,22 @@ All notable Askara Web changes are tracked here. Version changes follow SemVer w
 - **Minor**: new visible feature, new phase, or substantial enhancement.
 - **Patch**: bug fix, copy polish, metadata, or small visual refinement.
 
+## v0.2.2 — 2026-07-05
+
+### Changed
+
+- Hardened scroll-reveal behavior so section content remains visible by default and animates progressively when scrolled into view.
+- Improved mobile headline sizing to avoid edge clipping on narrow devices.
+- Loaded executive portrait assets eagerly so visual proof/full-page captures include team imagery reliably.
+- Captured desktop, tablet, and mobile responsive QA screenshots for visual proof.
+
+### Verified
+
+- `npm run typecheck` passed.
+- `npm run build` passed.
+- Responsive screenshot capture covered desktop `1440px`, tablet `834px`, and mobile `390px` widths.
+- Browser QA verified no console errors and live version badge renders correctly.
+
 ## v0.2.1 — 2026-07-05
 
 ### Changed

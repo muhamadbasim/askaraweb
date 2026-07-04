@@ -557,7 +557,8 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   .topbar__links { width: 100%; gap: 10px 14px; font-size: .9rem; }
   .feature-grid, .service-grid, .value-grid, .timeline, .team-grid, .about__layout .feature-grid { grid-template-columns: 1fr; }
   .hero__visual { aspect-ratio: 16 / 11; }
-  h1 { font-size: clamp(2.8rem, 16vw, 4.4rem); }
+  h1 { font-size: clamp(2.5rem, 13.8vw, 3.55rem); letter-spacing: -.055em; }
+  .hero__lead, .section-copy { font-size: 1rem; line-height: 1.65; }
   .vision-card h3 { font-size: 1.65rem; }
 }
 @media (prefers-reduced-motion: reduce) {

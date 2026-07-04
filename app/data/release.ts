@@ -1,6 +1,6 @@
 export const release = {
-  version: '0.2.1',
-  codename: 'Performance Polish',
+  version: '0.2.2',
+  codename: 'Responsive QA',
   date: '2026-07-05',
-  summary: 'Deferred decorative WebGL startup so core Askara content remains the first priority on page load.',
+  summary: 'Responsive visual QA pass with motion reveal hardening and mobile headline polish.',
 } as const

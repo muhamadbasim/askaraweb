@@ -7,7 +7,7 @@
     <div class="team-grid">
       <article v-for="member in team" :key="member.name" class="team-card">
         <figure class="team-card__photo-frame">
-          <img class="team-card__photo" :src="member.image" :alt="`${member.name}, ${member.role}`" loading="lazy" />
+          <img class="team-card__photo" :src="member.image" :alt="`${member.name}, ${member.role}`" loading="eager" decoding="async" />
         </figure>
         <p class="eyebrow">{{ member.role }}</p>
         <h3>{{ member.name }}</h3>

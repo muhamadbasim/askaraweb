@@ -51,10 +51,6 @@ onMounted(() => {
     const revealSelector =
       '.section-heading, .section-copy, .quote-card, .feature-card, .vision-card, .service-card, .timeline__item, .value-card, .team-card, .contact-card'
 
-    sections.forEach((section) => {
-      gsap.set(section.querySelectorAll(revealSelector), { autoAlpha: 0, y: 34 })
-    })
-
     sectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -63,12 +59,13 @@ onMounted(() => {
           const section = entry.target as HTMLElement
           const targets = section.querySelectorAll(revealSelector)
 
-          gsap.to(targets, {
-            autoAlpha: 1,
-            y: 0,
+          gsap.from(targets, {
+            autoAlpha: 0,
+            y: 34,
             duration: 0.72,
             ease: 'power3.out',
             stagger: 0.08,
+            clearProps: 'opacity,visibility,transform',
           })
 
           sectionObserver?.unobserve(section)
