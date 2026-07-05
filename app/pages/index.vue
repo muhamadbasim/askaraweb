@@ -53,7 +53,7 @@ onMounted(() => {
 
     const sections = gsap.utils.toArray<HTMLElement>('.section-frame:not(.hero)')
     const revealSelector =
-      '.section-heading, .section-copy, .quote-card, .feature-card, .vision-card, .service-card, .proof-card, .industry-card, .timeline__item, .value-card, .team-card, .contact-card'
+      '.section-heading, .section-copy, .quote-card, .feature-card, .vision-card, .service-card, .proof-card, .industry-card, .timeline__item, .value-card, .team-card, .contact-card, .contact-funnel'
 
     sectionObserver = new IntersectionObserver(
       (entries) => {
