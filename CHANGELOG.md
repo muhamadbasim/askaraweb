@@ -6,6 +6,29 @@ All notable Askara Web changes are tracked here. Version changes follow SemVer w
 - **Minor**: new visible feature, new phase, or substantial enhancement.
 - **Patch**: bug fix, copy polish, metadata, or small visual refinement.
 
+## v0.4.0 — 2026-07-05
+
+### Added
+
+- Website-native `Industry Solutions` showcase adapted from the comprehensive digital transformation infographic.
+- 10 detailed solution tracks covering manufacturing ERP, education, clinic/beauty, hotel, restaurant, laundry, outsourcing, franchise, BPR/fintech, and AI digital employee use cases.
+- Capability chips and business-impact panels for each industry solution card.
+- `One Technology Partner` CTA strip with six trust pillars: integration, real-time accuracy, automation, data-driven decisions, security/reliability, and professional support.
+
+### Changed
+
+- Expanded `Why Askara` from four conversion points into six trust indicators aligned with enterprise grade, AI-powered, scalable, custom, deployable, and long-term partnership positioning.
+- Updated release metadata and visible version badge to `v0.4.0 · Industry Solutions`.
+- Corrected the phone CTA href source while keeping the public formatted label unchanged.
+
+### Verified
+
+- `npm run typecheck` passed.
+- `npm run build` passed.
+- `git diff --check` passed.
+- Browser QA verified one `<h1>`, 10 industry cards, 60 capability chips, 10 benefit panels, 6 partner pillars, 6 Why Askara cards, valid contact CTA hrefs, `v0.4.0 · Industry Solutions` badge, and no console errors.
+- Desktop and mobile screenshots captured under `qa/screenshots/` for visual proof.
+
 ## v0.3.0 — 2026-07-05
 
 ### Added

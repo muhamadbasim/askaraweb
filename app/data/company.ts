@@ -13,6 +13,20 @@ export interface ConversionProof {
   description: string
 }
 
+export interface SolutionCapability {
+  label: string
+}
+
+export interface IndustrySolution {
+  title: string
+  subtitle: string
+  icon: string
+  accent: string
+  description: string
+  capabilities: string[]
+  benefits: string[]
+}
+
 export interface ApproachStep {
   number: string
   title: string
@@ -115,60 +129,162 @@ export const values: DescriptionItem[] = [
   },
 ]
 
-
 export const whyAskara: ConversionProof[] = [
   {
     metric: '01',
-    title: 'Strategy before build',
-    description: 'Every engagement starts with business goals, operational context, and a clear roadmap before engineering begins.',
+    title: 'Enterprise grade solutions',
+    description: 'Business platforms are designed around reliable workflows, maintainable architecture, and operational accountability.',
   },
   {
     metric: '02',
-    title: 'Integrated delivery team',
-    description: 'Consulting, UX, software, cloud, data, and automation work as one delivery lane to reduce handoff friction.',
+    title: 'AI-powered innovation',
+    description: 'Automation, analytics, and AI assistants help teams reduce manual work and improve response speed.',
   },
   {
     metric: '03',
-    title: 'Scalable by design',
-    description: 'Solutions are designed for secure growth, maintainable architecture, and future integration from day one.',
+    title: 'Scalable architecture',
+    description: 'Solutions are built for secure growth, future integration, and evolving business complexity from day one.',
   },
   {
     metric: '04',
-    title: 'Partnership mindset',
-    description: 'Askara supports implementation, optimization, and iteration so technology keeps creating value after launch.',
+    title: 'Custom development',
+    description: 'Askara adapts software to each industry process instead of forcing teams into generic tools.',
+  },
+  {
+    metric: '05',
+    title: 'Cloud and on-premise ready',
+    description: 'Deployment direction can align with performance, governance, security, and operational requirements.',
+  },
+  {
+    metric: '06',
+    title: 'Long-term partnership',
+    description: 'We support implementation, optimization, and iteration so technology keeps creating value after launch.',
   },
 ]
 
-export const industries: DescriptionItem[] = [
+export const industries: IndustrySolution[] = [
   {
-    title: 'Enterprise & Operations',
-    icon: '▦',
-    description: 'Internal platforms, workflow automation, dashboards, and integration layers for growing organizations.',
+    title: 'Manufacturing ERP',
+    subtitle: 'Smart Manufacturing Solutions',
+    icon: 'MFG',
+    accent: '#12afa4',
+    description: 'Integrated ERP for production, inventory, purchasing, quality, maintenance, finance, and supply chain visibility.',
+    capabilities: ['Production management', 'Inventory control', 'Purchasing workflow', 'Quality control', 'Maintenance planning', 'Finance reporting', 'Supply chain dashboard', 'AI forecasting'],
+    benefits: ['Increase productivity', 'Reduce operational cost', 'Monitor factory performance in real time'],
   },
   {
-    title: 'Retail & Commerce',
-    icon: '◈',
-    description: 'Digital storefronts, order flows, mobile experiences, and data-driven customer engagement.',
+    title: 'Education System',
+    subtitle: 'Smart Education Platform',
+    icon: 'EDU',
+    accent: '#3b82f6',
+    description: 'Digital academic platform for student information, learning delivery, attendance, parent engagement, and school finance.',
+    capabilities: ['Student information', 'Learning management', 'Academic management', 'Attendance tracking', 'Parent portal', 'Finance module', 'Digital library', 'AI assistant'],
+    benefits: ['Improve learning experience', 'Simplify academic operations', 'Strengthen parent engagement'],
   },
   {
-    title: 'Education & Training',
-    icon: '✧',
-    description: 'Learning platforms, admissions workflows, analytics, and automation for modern education providers.',
+    title: 'Clinic & Beauty Management',
+    subtitle: 'Smart Clinic Ecosystem',
+    icon: 'CLN',
+    accent: '#ec4899',
+    description: 'Clinic operating system for appointments, patient records, treatment history, membership, CRM, inventory, and dashboards.',
+    capabilities: ['Patient management', 'Appointment scheduling', 'Electronic medical records', 'Treatment history', 'Membership programs', 'CRM follow-up', 'Inventory control', 'Financial dashboard'],
+    benefits: ['Improve patient experience', 'Increase retention', 'Streamline clinic operations'],
   },
   {
-    title: 'Professional Services',
-    icon: '◎',
-    description: 'Client portals, CRM workflows, reporting systems, and productivity tools for service businesses.',
+    title: 'Hotel Management',
+    subtitle: 'Integrated Hotel Solutions',
+    icon: 'HTL',
+    accent: '#06b6d4',
+    description: 'Hotel platform for reservation, front office, housekeeping, F&B, channel manager, POS, revenue, and guest services.',
+    capabilities: ['Reservation system', 'Front office', 'Housekeeping', 'F&B operations', 'Channel manager', 'POS integration', 'Revenue dashboard', 'Guest portal'],
+    benefits: ['Elevate guest experience', 'Increase occupancy visibility', 'Improve revenue control'],
   },
   {
-    title: 'Property & Facilities',
-    icon: '▱',
-    description: 'Operational systems, booking flows, asset tracking, and digital tenant or customer experiences.',
+    title: 'Resto Management',
+    subtitle: 'Smart Restaurant Solutions',
+    icon: 'RST',
+    accent: '#f97316',
+    description: 'Restaurant platform for POS, menu recipes, stock movement, kitchen display, online orders, loyalty, and analytics.',
+    capabilities: ['POS cashier', 'Menu recipe costing', 'Inventory movement', 'Kitchen display system', 'Table reservation', 'Online ordering', 'CRM loyalty', 'Analytics dashboard'],
+    benefits: ['Accelerate service flow', 'Control food cost', 'Improve customer satisfaction'],
   },
   {
-    title: 'Data-driven Teams',
+    title: 'Laundry Management',
+    subtitle: 'Smart Laundry Solutions',
+    icon: 'LDY',
+    accent: '#22c55e',
+    description: 'Laundry business system for orders, membership, pickup delivery, inventory, machine assets, staff performance, and billing.',
+    capabilities: ['Order management', 'Customer membership', 'Pickup delivery', 'Inventory supplies', 'Machine assets', 'Staff performance', 'Billing automation', 'Operational reporting'],
+    benefits: ['Increase operational efficiency', 'Improve customer service', 'Track profitability clearly'],
+  },
+  {
+    title: 'Outsourcing Management',
+    subtitle: 'Workforce Solution',
+    icon: 'HR',
+    accent: '#8b5cf6',
+    description: 'Workforce management platform for employee data, attendance, payroll, contract, performance, training, billing, and compliance.',
+    capabilities: ['Employee management', 'Attendance tracking', 'Payroll process', 'Contract control', 'Performance review', 'Training records', 'Client billing', 'Compliance reports'],
+    benefits: ['Optimize workforce operations', 'Improve cost efficiency', 'Maintain service quality'],
+  },
+  {
+    title: 'Franchise Management',
+    subtitle: 'Grow Your Franchise Business',
+    icon: 'FRC',
+    accent: '#eab308',
+    description: 'Franchise growth system for franchisees, outlets, royalty, supply chain, marketing, sales reporting, and compliance documents.',
+    capabilities: ['Franchisee management', 'Outlet operations', 'Royalty tracking', 'Supply chain flow', 'Marketing campaigns', 'Sales reporting', 'Document control', 'Compliance dashboard'],
+    benefits: ['Scale expansion faster', 'Standardize outlet operations', 'Track network profitability'],
+  },
+  {
+    title: 'BPR / Fintech System',
+    subtitle: 'Digital Financial Solutions',
+    icon: 'FIN',
+    accent: '#14b8a6',
+    description: 'Financial workflow platform for loan management, credit analysis, collection, approvals, customer portal, reporting, and AI scoring.',
+    capabilities: ['Loan management', 'Credit analysis', 'Collection workflow', 'Member management', 'Approval workflow', 'Customer portal', 'Regulatory reporting', 'AI credit scoring'],
+    benefits: ['Speed up approvals', 'Improve risk control', 'Strengthen collection visibility'],
+  },
+  {
+    title: 'AI Digital Employee',
+    subtitle: 'Next Generation AI Workforce',
     icon: 'AI',
-    description: 'Business intelligence, AI-assisted workflows, and automation for teams that need faster decisions.',
+    accent: '#38bdf8',
+    description: 'AI workforce solutions for customer service, reception, sales, HR, collection, knowledge management, data analysis, and executive support.',
+    capabilities: ['AI customer service', 'Virtual receptionist', 'Sales assistant', 'HR assistant', 'Collection assistant', 'Knowledge management', 'Data analyst', 'Executive assistant'],
+    benefits: ['Provide 24/7 availability', 'Reduce repetitive workload', 'Increase team productivity'],
+  },
+]
+
+export const technologyPartnerPillars: DescriptionItem[] = [
+  {
+    title: 'Integrated in One System',
+    icon: '▦',
+    description: 'Connect operations, data, and users through one coordinated digital ecosystem.',
+  },
+  {
+    title: 'Real-Time & Accurate',
+    icon: '↗',
+    description: 'Give leaders faster operational visibility through dashboards and structured workflows.',
+  },
+  {
+    title: 'Automation & Efficiency',
+    icon: '⚙',
+    description: 'Reduce repetitive manual work so teams can focus on high-value execution.',
+  },
+  {
+    title: 'Data-Driven Decision',
+    icon: '◎',
+    description: 'Turn business activity into insights that support measurable decisions.',
+  },
+  {
+    title: 'Secure & Reliable',
+    icon: '◇',
+    description: 'Design with reliability, access control, and operational continuity in mind.',
+  },
+  {
+    title: 'Professional Support',
+    icon: '24',
+    description: 'Partner beyond launch with improvement, maintenance, and practical technical guidance.',
   },
 ]
 

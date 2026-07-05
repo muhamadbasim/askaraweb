@@ -1,6 +1,6 @@
 export const release = {
-  version: '0.3.0',
-  codename: 'Conversion Polish',
+  version: '0.4.0',
+  codename: 'Industry Solutions',
   date: '2026-07-05',
-  summary: 'Business conversion polish with consultation CTAs, Why Askara proof points, and Industries Served content.',
+  summary: 'Industry solution showcase with 10 ERP, AI, automation, and enterprise application tracks plus expanded trust pillars.',
 } as const

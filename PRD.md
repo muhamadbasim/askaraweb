@@ -97,34 +97,53 @@ Metodologi 5 tahap:
 
 ### 5.6 Why Askara
 
-- Strategy before build
-- Integrated delivery team
-- Scalable by design
-- Partnership mindset
+- Enterprise grade solutions
+- AI-powered innovation
+- Scalable architecture
+- Custom development
+- Cloud and on-premise deployment readiness
+- Long-term technology partnership
 
-### 5.7 Industries Served
+### 5.7 Industry Solutions
 
-- Enterprise & Operations
-- Retail & Commerce
-- Education & Training
-- Professional Services
-- Property & Facilities
-- Data-driven Teams
+Adaptasi web semantic dari infographic “Comprehensive Digital Transformation Solutions”. Konten tidak dipasang sebagai gambar statis besar; setiap solusi di-render sebagai HTML text/card agar SEO-friendly, responsive, dan accessible.
 
-### 5.8 Values
+- Manufacturing ERP
+- Education System
+- Clinic & Beauty Management
+- Hotel Management
+- Resto Management
+- Laundry Management
+- Outsourcing Management
+- Franchise Management
+- BPR / Fintech System
+- AI Digital Employee
+
+Setiap industry solution menampilkan positioning, capability chips, dan business-impact benefits.
+
+### 5.8 One Technology Partner CTA
+
+- Integrated in One System
+- Real-Time & Accurate
+- Automation & Efficiency
+- Data-Driven Decision
+- Secure & Reliable
+- Professional Support
+
+### 5.9 Values
 
 - Collaboration
 - Innovation
 - Integrity
 - Excellence
 
-### 5.9 Team
+### 5.10 Team
 
 - Putri Diana Oktavia — CEO
 - Muhamad Basim — CTO
 - Firman Febryan — COO
 
-### 5.10 Contact
+### 5.11 Contact
 
 - Location: Deruzzi SPACE
 - Address: Jl. Sukajadi 25, Sukajadi, Jawa Barat 40162
@@ -155,6 +174,8 @@ Metodologi 5 tahap:
 | FR-016 | WhatsApp/consultation CTA dari hero dan contact funnel | High | Done |
 | FR-017 | Why Askara section untuk proof points bisnis | High | Done |
 | FR-018 | Industries Served section untuk positioning sektor calon klien | Medium | Done |
+| FR-019 | Industry Solutions section detail dari infographic solusi transformasi digital | High | Done |
+| FR-020 | One Technology Partner CTA strip dengan trust/value pillars | Medium | Done |
 
 ## 7. Kebutuhan Non-Fungsional
 
@@ -198,6 +219,7 @@ Metodologi 5 tahap:
 | Phase 4 | Premium interactive layer | Decorative Three.js hero background, WebGL/reduced-motion fallback, perf QA |
 | Phase 5 | QA & release hardening | Typecheck, build, browser QA, accessibility, responsive, Cloudflare checks |
 | Phase 6 | Business / conversion polish | WhatsApp CTA, Why Askara, Industries Served, stronger contact funnel |
+| Phase 7 | Industry solutions & trust layer | 10 solution tracks, capability chips, business-impact panels, technology partner CTA |
 
 ## 9. Acceptance Criteria
 

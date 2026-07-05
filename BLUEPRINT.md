@@ -147,7 +147,8 @@ Catatan implementasi terbaru:
 
 - Static content utama sudah dipindahkan ke `app/data/company.ts`.
 - Section utama sudah dipisah ke `app/components/sections/`.
-- Conversion content (`whyAskara`, `industries`, WhatsApp CTA) berada di `app/data/company.ts` agar CTA/contact funnel dan section baru tetap terpusat.
+- Conversion content (`whyAskara`, `industries`, `technologyPartnerPillars`, WhatsApp CTA) berada di `app/data/company.ts` agar CTA/contact funnel dan section baru tetap terpusat.
+- `IndustriesSection.vue` sekarang menjadi website-native adaptation dari infographic solusi transformasi digital: 10 industry cards, capability chips, business-impact panels, dan `One Technology Partner` CTA strip. Konten penting tetap HTML text, bukan gambar brochure statis.
 - Hero memiliki optional decorative WebGL canvas via `DecorativeHeroCanvas.client.vue`; canvas ini hanya progressive enhancement, `aria-hidden`, client-only, dan tidak aktif saat `prefers-reduced-motion` atau WebGL tidak tersedia.
 
 ## 6. Data Model
@@ -194,6 +195,16 @@ export interface IndustryItem {
   title: string
   icon: string
   description: string
+}
+
+export interface IndustrySolution {
+  title: string
+  subtitle: string
+  icon: string
+  accent: string
+  description: string
+  capabilities: string[]
+  benefits: string[]
 }
 ```
 
