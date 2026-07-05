@@ -7,6 +7,12 @@ export interface DescriptionItem extends IconTitleItem {
   description: string
 }
 
+export interface ConversionProof {
+  metric: string
+  title: string
+  description: string
+}
+
 export interface ApproachStep {
   number: string
   title: string
@@ -25,6 +31,8 @@ export const companyContact = {
   email: 'info@askaradigital.com',
   phone: '0822-5811-2280',
   phoneHref: 'tel:+6282258112280',
+  whatsappLabel: 'WhatsApp Consultation',
+  whatsappHref: 'https://wa.me/6282258112280?text=Halo%20Askara%2C%20saya%20ingin%20konsultasi%20solusi%20digital%20untuk%20bisnis%20saya.',
   website: 'www.askaradigital.com',
   websiteHref: 'https://www.askaradigital.com',
 } as const
@@ -104,6 +112,63 @@ export const values: DescriptionItem[] = [
     title: 'Excellence',
     icon: '▣',
     description: 'We are committed to delivering the highest quality in everything we do.',
+  },
+]
+
+
+export const whyAskara: ConversionProof[] = [
+  {
+    metric: '01',
+    title: 'Strategy before build',
+    description: 'Every engagement starts with business goals, operational context, and a clear roadmap before engineering begins.',
+  },
+  {
+    metric: '02',
+    title: 'Integrated delivery team',
+    description: 'Consulting, UX, software, cloud, data, and automation work as one delivery lane to reduce handoff friction.',
+  },
+  {
+    metric: '03',
+    title: 'Scalable by design',
+    description: 'Solutions are designed for secure growth, maintainable architecture, and future integration from day one.',
+  },
+  {
+    metric: '04',
+    title: 'Partnership mindset',
+    description: 'Askara supports implementation, optimization, and iteration so technology keeps creating value after launch.',
+  },
+]
+
+export const industries: DescriptionItem[] = [
+  {
+    title: 'Enterprise & Operations',
+    icon: '▦',
+    description: 'Internal platforms, workflow automation, dashboards, and integration layers for growing organizations.',
+  },
+  {
+    title: 'Retail & Commerce',
+    icon: '◈',
+    description: 'Digital storefronts, order flows, mobile experiences, and data-driven customer engagement.',
+  },
+  {
+    title: 'Education & Training',
+    icon: '✧',
+    description: 'Learning platforms, admissions workflows, analytics, and automation for modern education providers.',
+  },
+  {
+    title: 'Professional Services',
+    icon: '◎',
+    description: 'Client portals, CRM workflows, reporting systems, and productivity tools for service businesses.',
+  },
+  {
+    title: 'Property & Facilities',
+    icon: '▱',
+    description: 'Operational systems, booking flows, asset tracking, and digital tenant or customer experiences.',
+  },
+  {
+    title: 'Data-driven Teams',
+    icon: 'AI',
+    description: 'Business intelligence, AI-assisted workflows, and automation for teams that need faster decisions.',
   },
 ]
 

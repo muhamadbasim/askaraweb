@@ -19,6 +19,8 @@
         <a href="#about">About</a>
         <a href="#vision">Vision</a>
         <a href="#services">Services</a>
+        <a href="#why-askara">Why Askara</a>
+        <a href="#industries">Industries</a>
         <a href="#approach">Approach</a>
         <a href="#values">Values</a>
         <a href="#team">Team</a>
@@ -40,7 +42,7 @@
         </p>
         <div class="hero__actions" aria-label="Hero actions">
           <a class="btn btn--primary" href="#services">Explore Services</a>
-          <a class="btn btn--ghost" href="#contact">Let’s Connect</a>
+          <a class="btn btn--ghost" :href="companyContact.whatsappHref" target="_blank" rel="noopener noreferrer">WhatsApp Consultation</a>
         </div>
       </div>
 
@@ -58,4 +60,5 @@
 
 <script setup lang="ts">
 import DecorativeHeroCanvas from '~/components/DecorativeHeroCanvas.client.vue'
+import { companyContact } from '~/data/company'
 </script>

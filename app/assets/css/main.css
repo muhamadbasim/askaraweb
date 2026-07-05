@@ -87,7 +87,7 @@ button:focus-visible {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 12px 18px;
-  max-width: 720px;
+  max-width: 860px;
   font-weight: 700;
   color: var(--askara-navy);
 }
@@ -186,6 +186,8 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
 .btn:hover { transform: translateY(-2px); }
 .btn--primary { color: white; background: linear-gradient(135deg, var(--askara-navy), var(--askara-teal)); box-shadow: 0 18px 35px rgba(18, 175, 164, .24); }
 .btn--ghost { color: var(--askara-navy); border: 1px solid rgba(7, 27, 58, .18); background: rgba(255,255,255,.7); }
+.btn--light { color: var(--askara-navy); background: linear-gradient(135deg, #ffffff, #c8fff8); }
+.btn--outline-light { color: white; border: 1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.08); }
 
 .hero__visual {
   position: relative;
@@ -270,7 +272,7 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   font: 800 clamp(1.2rem, 2vw, 1.75rem)/1.35 var(--font-heading);
 }
 
-.feature-grid, .service-grid, .value-grid, .team-grid {
+.feature-grid, .service-grid, .value-grid, .team-grid, .proof-grid, .industry-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
@@ -278,8 +280,10 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
 }
 .about__layout .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0; }
 .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.proof-grid { position: relative; z-index: 2; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.industry-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.feature-card, .service-card, .value-card, .team-card {
+.feature-card, .service-card, .value-card, .team-card, .proof-card, .industry-card {
   border: 1px solid rgba(7, 27, 58, .08);
   border-radius: 24px;
   padding: 24px;
@@ -288,12 +292,12 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
   will-change: transform;
 }
-.feature-card:hover, .service-card:hover, .value-card:hover, .team-card:hover {
+.feature-card:hover, .service-card:hover, .value-card:hover, .team-card:hover, .proof-card:hover, .industry-card:hover {
   border-color: rgba(18, 175, 164, .24);
   transform: translateY(-6px);
   box-shadow: 0 22px 55px rgba(3,17,38,.12);
 }
-.feature-card__icon, .service-card__icon, .value-card__icon, .vision-card__icon {
+.feature-card__icon, .service-card__icon, .value-card__icon, .vision-card__icon, .industry-card__icon {
   display: inline-grid;
   width: 54px;
   height: 54px;
@@ -303,8 +307,24 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   font-weight: 900;
   background: rgba(18, 175, 164, .1);
 }
-.service-card h3, .feature-card h3, .value-card h3, .team-card h3 { color: var(--askara-navy); text-transform: uppercase; }
-.service-card p:last-child, .value-card p { color: rgba(21,36,58,.72); line-height: 1.65; }
+.service-card h3, .feature-card h3, .value-card h3, .team-card h3, .proof-card h3, .industry-card h3 { color: var(--askara-navy); text-transform: uppercase; }
+.service-card p:last-child, .value-card p, .proof-card p, .industry-card p { color: rgba(21,36,58,.72); line-height: 1.65; }
+.section-copy--dark { color: rgba(255,255,255,.78); }
+.proof-card {
+  border-color: rgba(255,255,255,.14);
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(10px);
+}
+.proof-card h3 { color: white; }
+.proof-card p { color: rgba(255,255,255,.76); }
+.proof-card__metric {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--askara-teal-bright);
+  font: 800 2.2rem/1 var(--font-heading);
+}
+.digital-wave--why { right: -18%; bottom: -24%; }
+.industry-card { background: linear-gradient(145deg, rgba(255,255,255,.92), rgba(237,249,250,.82)); }
 
 .digital-wave {
   position: absolute;
@@ -510,6 +530,36 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
 }
 .contact h2 span { color: white; }
 .contact .section-copy { color: rgba(255,255,255,.78); }
+.contact__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.contact-funnel {
+  display: grid;
+  gap: 12px;
+  max-width: 620px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: funnel;
+}
+.contact-funnel li {
+  position: relative;
+  min-height: 44px;
+  padding: 12px 14px 12px 56px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  color: rgba(255,255,255,.82);
+  font-weight: 700;
+  background: rgba(255,255,255,.06);
+}
+.contact-funnel li::before {
+  counter-increment: funnel;
+  content: counter(funnel, decimal-leading-zero);
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--askara-teal-bright);
+  font: 800 .9rem/1 var(--font-heading);
+}
 .contact-card {
   display: grid;
   gap: 14px;
@@ -541,7 +591,7 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
   .topbar__links { justify-content: flex-start; max-width: none; }
   .hero__grid, .about__layout, .vision__grid, .contact { grid-template-columns: 1fr; }
   .hero__visual { max-width: none; justify-self: stretch; }
-  .feature-grid, .service-grid, .value-grid, .timeline, .team-grid { grid-template-columns: 1fr 1fr; }
+  .feature-grid, .service-grid, .value-grid, .timeline, .team-grid, .proof-grid, .industry-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 1021px) and (max-width: 1180px) {
   .hero__grid {
@@ -555,7 +605,7 @@ h1 span:nth-child(2) { color: var(--askara-teal); }
 @media (max-width: 620px) {
   .section-frame { width: min(100% - 16px, 1180px); border-radius: 22px; padding: 24px; }
   .topbar__links { width: 100%; gap: 10px 14px; font-size: .9rem; }
-  .feature-grid, .service-grid, .value-grid, .timeline, .team-grid, .about__layout .feature-grid { grid-template-columns: 1fr; }
+  .feature-grid, .service-grid, .value-grid, .timeline, .team-grid, .proof-grid, .industry-grid, .about__layout .feature-grid { grid-template-columns: 1fr; }
   .hero__visual { aspect-ratio: 16 / 11; }
   h1 { font-size: clamp(2.5rem, 13.8vw, 3.55rem); letter-spacing: -.055em; }
   .hero__lead, .section-copy { font-size: 1rem; line-height: 1.65; }

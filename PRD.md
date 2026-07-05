@@ -14,6 +14,7 @@ Arah pengalaman yang ditargetkan adalah website corporate premium dengan inspira
 4. Menyediakan jalur kontak yang mudah diakses.
 5. Menjadi foundation yang rapi untuk pengembangan fitur baru di phase berikutnya.
 6. Menghadirkan visual navy + teal corporate technology sesuai company profile.
+7. Memperkuat conversion funnel melalui CTA konsultasi, proof points, dan konteks industri.
 
 ## 3. Target Pengguna
 
@@ -94,25 +95,42 @@ Metodologi 5 tahap:
 4. Deliver — Implement solutions that drive real impact.
 5. Support — Provide ongoing optimization and support.
 
-### 5.6 Values
+### 5.6 Why Askara
+
+- Strategy before build
+- Integrated delivery team
+- Scalable by design
+- Partnership mindset
+
+### 5.7 Industries Served
+
+- Enterprise & Operations
+- Retail & Commerce
+- Education & Training
+- Professional Services
+- Property & Facilities
+- Data-driven Teams
+
+### 5.8 Values
 
 - Collaboration
 - Innovation
 - Integrity
 - Excellence
 
-### 5.7 Team
+### 5.9 Team
 
 - Putri Diana Oktavia — CEO
 - Muhamad Basim — CTO
 - Firman Febryan — COO
 
-### 5.8 Contact
+### 5.10 Contact
 
 - Location: Deruzzi SPACE
 - Address: Jl. Sukajadi 25, Sukajadi, Jawa Barat 40162
 - Email: info@askaradigital.com
 - Phone: 0822-5811-2280
+- WhatsApp consultation CTA
 - Website: www.askaradigital.com
 
 ## 6. Kebutuhan Fungsional
@@ -134,6 +152,9 @@ Metodologi 5 tahap:
 | FR-013 | Optional decorative Three.js/WebGL layer | Low | Done |
 | FR-014 | Reduced-motion fallback | High | Done |
 | FR-015 | SEO metadata dasar | High | Done |
+| FR-016 | WhatsApp/consultation CTA dari hero dan contact funnel | High | Done |
+| FR-017 | Why Askara section untuk proof points bisnis | High | Done |
+| FR-018 | Industries Served section untuk positioning sektor calon klien | Medium | Done |
 
 ## 7. Kebutuhan Non-Fungsional
 
@@ -176,6 +197,7 @@ Metodologi 5 tahap:
 | Phase 3 | Motion layer | CSS/GSAP animations, scroll reveal, hover polish, reduced motion |
 | Phase 4 | Premium interactive layer | Decorative Three.js hero background, WebGL/reduced-motion fallback, perf QA |
 | Phase 5 | QA & release hardening | Typecheck, build, browser QA, accessibility, responsive, Cloudflare checks |
+| Phase 6 | Business / conversion polish | WhatsApp CTA, Why Askara, Industries Served, stronger contact funnel |
 
 ## 9. Acceptance Criteria
 

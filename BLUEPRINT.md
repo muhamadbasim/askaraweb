@@ -40,6 +40,8 @@ askaraweb/
 │   │       ├── AboutSection.vue
 │   │       ├── VisionMissionSection.vue
 │   │       ├── ServicesSection.vue
+│   │       ├── WhyAskaraSection.vue
+│   │       ├── IndustriesSection.vue
 │   │       ├── ApproachSection.vue
 │   │       ├── ValuesSection.vue
 │   │       ├── TeamSection.vue
@@ -83,6 +85,8 @@ app/
 │   │   ├── AboutSection.vue
 │   │   ├── VisionMissionSection.vue
 │   │   ├── ServicesSection.vue
+│   │   ├── WhyAskaraSection.vue
+│   │   ├── IndustriesSection.vue
 │   │   ├── ApproachSection.vue
 │   │   ├── ValuesSection.vue
 │   │   ├── TeamSection.vue
@@ -119,10 +123,12 @@ Target urutan section:
 2. `AboutSection`
 3. `VisionMissionSection`
 4. `ServicesSection`
-5. `ApproachSection`
-6. `ValuesSection`
-7. `TeamSection`
-8. `ContactSection`
+5. `WhyAskaraSection`
+6. `IndustriesSection`
+7. `ApproachSection`
+8. `ValuesSection`
+9. `TeamSection`
+10. `ContactSection`
 
 Saat ini `index.vue` hanya menjadi page composer dan static semantic company profile sudah dipisah ke section components:
 
@@ -130,6 +136,8 @@ Saat ini `index.vue` hanya menjadi page composer dan static semantic company pro
 - About + quote box
 - Vision & Mission
 - Services
+- Why Askara conversion proof points
+- Industries Served sector positioning
 - Approach
 - Values
 - Team
@@ -139,6 +147,7 @@ Catatan implementasi terbaru:
 
 - Static content utama sudah dipindahkan ke `app/data/company.ts`.
 - Section utama sudah dipisah ke `app/components/sections/`.
+- Conversion content (`whyAskara`, `industries`, WhatsApp CTA) berada di `app/data/company.ts` agar CTA/contact funnel dan section baru tetap terpusat.
 - Hero memiliki optional decorative WebGL canvas via `DecorativeHeroCanvas.client.vue`; canvas ini hanya progressive enhancement, `aria-hidden`, client-only, dan tidak aktif saat `prefers-reduced-motion` atau WebGL tidak tersedia.
 
 ## 6. Data Model
@@ -172,7 +181,23 @@ export interface ServiceItem {
 }
 ```
 
-### 6.3 Approach
+### 6.3 Conversion Proof / Industry
+
+```ts
+export interface ConversionProof {
+  metric: string
+  title: string
+  description: string
+}
+
+export interface IndustryItem {
+  title: string
+  icon: string
+  description: string
+}
+```
+
+### 6.4 Approach
 
 ```ts
 export interface ApproachStep {
@@ -182,7 +207,7 @@ export interface ApproachStep {
 }
 ```
 
-### 6.4 Value
+### 6.5 Value
 
 ```ts
 export interface ValueItem {
@@ -192,7 +217,7 @@ export interface ValueItem {
 }
 ```
 
-### 6.5 Team
+### 6.6 Team
 
 ```ts
 export interface TeamMember {

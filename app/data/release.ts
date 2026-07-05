@@ -1,6 +1,6 @@
 export const release = {
-  version: '0.2.2',
-  codename: 'Responsive QA',
+  version: '0.3.0',
+  codename: 'Conversion Polish',
   date: '2026-07-05',
-  summary: 'Responsive visual QA pass with motion reveal hardening and mobile headline polish.',
+  summary: 'Business conversion polish with consultation CTAs, Why Askara proof points, and Industries Served content.',
 } as const

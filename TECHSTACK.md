@@ -221,9 +221,12 @@ Sebelum menambah library baru, cek:
 
 ## 14. Versioning & Release Notes
 
+- Current release: `v0.3.0 · Conversion Polish`.
 - Current version is tracked in `package.json`, `package-lock.json`, `app/data/release.ts`, and `CHANGELOG.md`.
 - Every meaningful Askara web change should bump the version, update `CHANGELOG.md`, commit, push to GitHub, and deploy/verify Cloudflare Pages.
 - Visible site version is rendered subtly in the contact section from `app/data/release.ts`.
+
+v0.3.0 adds conversion/business content without new dependencies: WhatsApp consultation CTA, Why Askara proof section, Industries Served section, and stronger contact funnel.
 
 ## 15. Environment Notes
 

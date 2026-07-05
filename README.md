@@ -1,6 +1,6 @@
 # Askara Web
 
-Current version: **v0.2.2** — Responsive QA
+Current version: **v0.3.0** — Conversion Polish
 
 See [`CHANGELOG.md`](./CHANGELOG.md) for release history.
 

@@ -6,6 +6,26 @@ All notable Askara Web changes are tracked here. Version changes follow SemVer w
 - **Minor**: new visible feature, new phase, or substantial enhancement.
 - **Patch**: bug fix, copy polish, metadata, or small visual refinement.
 
+## v0.3.0 — 2026-07-05
+
+### Added
+
+- WhatsApp consultation CTA in the hero and contact funnel.
+- `Why Askara` conversion proof section with business-first differentiators.
+- `Industries Served` section for client-facing sector positioning.
+
+### Changed
+
+- Strengthened contact copy around consultation and measurable delivery.
+- Expanded homepage navigation for Why Askara and Industries anchors.
+- Updated release metadata and visible version badge to `v0.3.0 · Conversion Polish`.
+
+### Verified
+
+- `npm run typecheck` passed.
+- `npm run build` passed.
+- Browser QA verified new sections, CTA links, loaded team images, and no console errors.
+
 ## v0.2.2 — 2026-07-05
 
 ### Changed

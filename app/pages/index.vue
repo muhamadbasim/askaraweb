@@ -4,6 +4,8 @@
     <AboutSection />
     <VisionMissionSection />
     <ServicesSection />
+    <WhyAskaraSection />
+    <IndustriesSection />
     <ApproachSection />
     <ValuesSection />
     <TeamSection />
@@ -17,10 +19,12 @@ import AboutSection from '~/components/sections/AboutSection.vue'
 import ApproachSection from '~/components/sections/ApproachSection.vue'
 import ContactSection from '~/components/sections/ContactSection.vue'
 import HeroSection from '~/components/sections/HeroSection.vue'
+import IndustriesSection from '~/components/sections/IndustriesSection.vue'
 import ServicesSection from '~/components/sections/ServicesSection.vue'
 import TeamSection from '~/components/sections/TeamSection.vue'
 import ValuesSection from '~/components/sections/ValuesSection.vue'
 import VisionMissionSection from '~/components/sections/VisionMissionSection.vue'
+import WhyAskaraSection from '~/components/sections/WhyAskaraSection.vue'
 
 let motionContext: gsap.Context | undefined
 let sectionObserver: IntersectionObserver | undefined
@@ -49,7 +53,7 @@ onMounted(() => {
 
     const sections = gsap.utils.toArray<HTMLElement>('.section-frame:not(.hero)')
     const revealSelector =
-      '.section-heading, .section-copy, .quote-card, .feature-card, .vision-card, .service-card, .timeline__item, .value-card, .team-card, .contact-card'
+      '.section-heading, .section-copy, .quote-card, .feature-card, .vision-card, .service-card, .proof-card, .industry-card, .timeline__item, .value-card, .team-card, .contact-card'
 
     sectionObserver = new IntersectionObserver(
       (entries) => {
