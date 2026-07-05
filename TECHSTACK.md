@@ -221,10 +221,12 @@ Sebelum menambah library baru, cek:
 
 ## 14. Versioning & Release Notes
 
-- Current release: `v0.4.0 · Industry Solutions`.
+- Current release: `v0.4.1 · Industry Interaction Polish`.
 - Current version is tracked in `package.json`, `package-lock.json`, `app/data/release.ts`, and `CHANGELOG.md`.
 - Every meaningful Askara web change should bump the version, update `CHANGELOG.md`, commit, push to GitHub, and deploy/verify Cloudflare Pages.
 - Visible site version is rendered subtly in the contact section from `app/data/release.ts`.
+
+v0.4.1 adds lightweight Vue/CSS interaction polish without new dependencies: accessible category filter chips, dynamic solution summary counts, and per-card category badges for the Industry Solutions section.
 
 v0.4.0 adds industry solution content without new dependencies: 10 detailed solution cards adapted from the digital transformation infographic, expanded Why Askara trust indicators, and a One Technology Partner CTA strip. The infographic content is rebuilt as semantic HTML/CSS instead of being embedded as one static image.
 

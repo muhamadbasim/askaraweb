@@ -10,12 +10,12 @@
 
     <div class="solution-summary" aria-label="Askara solution coverage summary">
       <article>
-        <strong>10</strong>
-        <span>industry-ready solution tracks</span>
+        <strong>{{ filteredIndustries.length }}</strong>
+        <span>{{ activeCategory === 'All' ? 'industry-ready solution tracks' : `${activeCategory} solution track${filteredIndustries.length > 1 ? 's' : ''}` }}</span>
       </article>
       <article>
-        <strong>ERP + AI</strong>
-        <span>automation and intelligence layer</span>
+        <strong>{{ activeCapabilitiesCount }}</strong>
+        <span>visible capabilities in this view</span>
       </article>
       <article>
         <strong>1 partner</strong>
@@ -23,9 +23,27 @@
       </article>
     </div>
 
+    <div class="solution-filters" aria-label="Filter industry solutions by category">
+      <button
+        v-for="category in solutionCategories"
+        :key="category"
+        type="button"
+        class="solution-filter"
+        :class="{ 'solution-filter--active': activeCategory === category }"
+        :aria-pressed="activeCategory === category"
+        @click="activeCategory = category"
+      >
+        {{ category }}
+      </button>
+    </div>
+
+    <p class="solution-filter-status" role="status" aria-live="polite">
+      Showing {{ filteredIndustries.length }} of {{ industries.length }} solution tracks.
+    </p>
+
     <div class="industry-grid industry-grid--solutions" aria-label="Digital transformation solutions by industry">
       <article
-        v-for="industry in industries"
+        v-for="industry in filteredIndustries"
         :key="industry.title"
         class="industry-card industry-card--solution"
         :style="{ '--solution-accent': industry.accent }"
@@ -34,6 +52,7 @@
           <span class="industry-card__icon industry-card__icon--solution" aria-hidden="true">{{ industry.icon }}</span>
           <span class="industry-card__subtitle">{{ industry.subtitle }}</span>
         </div>
+        <span class="industry-card__category">{{ industry.category }}</span>
         <h3>{{ industry.title }}</h3>
         <p>{{ industry.description }}</p>
 
@@ -72,4 +91,13 @@
 
 <script setup lang="ts">
 import { companyContact, industries, technologyPartnerPillars } from '~/data/company'
+
+const activeCategory = ref('All')
+const solutionCategories = ['All', ...new Set(industries.map((industry) => industry.category))]
+const filteredIndustries = computed(() => {
+  if (activeCategory.value === 'All') return industries
+
+  return industries.filter((industry) => industry.category === activeCategory.value)
+})
+const activeCapabilitiesCount = computed(() => filteredIndustries.value.reduce((total, industry) => total + Math.min(industry.capabilities.length, 6), 0))
 </script>

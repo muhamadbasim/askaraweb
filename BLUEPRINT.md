@@ -200,6 +200,7 @@ export interface IndustryItem {
 export interface IndustrySolution {
   title: string
   subtitle: string
+  category: string
   icon: string
   accent: string
   description: string
@@ -207,6 +208,8 @@ export interface IndustrySolution {
   benefits: string[]
 }
 ```
+
+v0.4.1 adds lightweight client-side category filtering in `IndustriesSection.vue`. Filtering changes the visible card list and summary counts only; all solution content remains in the typed `industries` data array.
 
 ### 6.4 Approach
 

@@ -6,6 +6,26 @@ All notable Askara Web changes are tracked here. Version changes follow SemVer w
 - **Minor**: new visible feature, new phase, or substantial enhancement.
 - **Patch**: bug fix, copy polish, metadata, or small visual refinement.
 
+## v0.4.1 — 2026-07-05
+
+### Added
+
+- Category filter chips for the Industry Solutions section with accessible button states.
+- Dynamic solution summary counts that update based on the active category.
+- Category badges on each industry solution card for faster scanning.
+
+### Changed
+
+- Updated release metadata and visible version badge to `v0.4.1 · Industry Interaction Polish`.
+
+### Verified
+
+- `npm run typecheck` passed.
+- `npm run build` passed.
+- `git diff --check` passed.
+- Browser QA verified filter buttons, Finance category filtering, dynamic summary counts, one `<h1>`, valid release badge, no placeholder anchors, and no console errors.
+- Desktop and mobile screenshots captured under `qa/screenshots/` for visual proof.
+
 ## v0.4.0 — 2026-07-05
 
 ### Added

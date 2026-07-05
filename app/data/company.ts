@@ -20,6 +20,7 @@ export interface SolutionCapability {
 export interface IndustrySolution {
   title: string
   subtitle: string
+  category: string
   icon: string
   accent: string
   description: string
@@ -166,6 +167,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'Manufacturing ERP',
     subtitle: 'Smart Manufacturing Solutions',
+    category: 'Operations',
     icon: 'MFG',
     accent: '#12afa4',
     description: 'Integrated ERP for production, inventory, purchasing, quality, maintenance, finance, and supply chain visibility.',
@@ -175,6 +177,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'Education System',
     subtitle: 'Smart Education Platform',
+    category: 'Experience',
     icon: 'EDU',
     accent: '#3b82f6',
     description: 'Digital academic platform for student information, learning delivery, attendance, parent engagement, and school finance.',
@@ -184,6 +187,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'Clinic & Beauty Management',
     subtitle: 'Smart Clinic Ecosystem',
+    category: 'Experience',
     icon: 'CLN',
     accent: '#ec4899',
     description: 'Clinic operating system for appointments, patient records, treatment history, membership, CRM, inventory, and dashboards.',
@@ -193,6 +197,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'Hotel Management',
     subtitle: 'Integrated Hotel Solutions',
+    category: 'Hospitality',
     icon: 'HTL',
     accent: '#06b6d4',
     description: 'Hotel platform for reservation, front office, housekeeping, F&B, channel manager, POS, revenue, and guest services.',
@@ -202,6 +207,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'Resto Management',
     subtitle: 'Smart Restaurant Solutions',
+    category: 'Hospitality',
     icon: 'RST',
     accent: '#f97316',
     description: 'Restaurant platform for POS, menu recipes, stock movement, kitchen display, online orders, loyalty, and analytics.',
@@ -211,6 +217,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'Laundry Management',
     subtitle: 'Smart Laundry Solutions',
+    category: 'Operations',
     icon: 'LDY',
     accent: '#22c55e',
     description: 'Laundry business system for orders, membership, pickup delivery, inventory, machine assets, staff performance, and billing.',
@@ -220,6 +227,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'Outsourcing Management',
     subtitle: 'Workforce Solution',
+    category: 'Workforce',
     icon: 'HR',
     accent: '#8b5cf6',
     description: 'Workforce management platform for employee data, attendance, payroll, contract, performance, training, billing, and compliance.',
@@ -229,6 +237,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'Franchise Management',
     subtitle: 'Grow Your Franchise Business',
+    category: 'Growth',
     icon: 'FRC',
     accent: '#eab308',
     description: 'Franchise growth system for franchisees, outlets, royalty, supply chain, marketing, sales reporting, and compliance documents.',
@@ -238,6 +247,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'BPR / Fintech System',
     subtitle: 'Digital Financial Solutions',
+    category: 'Finance',
     icon: 'FIN',
     accent: '#14b8a6',
     description: 'Financial workflow platform for loan management, credit analysis, collection, approvals, customer portal, reporting, and AI scoring.',
@@ -247,6 +257,7 @@ export const industries: IndustrySolution[] = [
   {
     title: 'AI Digital Employee',
     subtitle: 'Next Generation AI Workforce',
+    category: 'AI & Automation',
     icon: 'AI',
     accent: '#38bdf8',
     description: 'AI workforce solutions for customer service, reception, sales, HR, collection, knowledge management, data analysis, and executive support.',

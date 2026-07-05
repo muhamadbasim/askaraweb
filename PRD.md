@@ -121,6 +121,8 @@ Adaptasi web semantic dari infographic “Comprehensive Digital Transformation S
 
 Setiap industry solution menampilkan positioning, capability chips, dan business-impact benefits.
 
+v0.4.1 menambahkan category filter chips untuk membantu calon klien melihat solusi berdasarkan konteks kebutuhan seperti Operations, Experience, Hospitality, Workforce, Growth, Finance, dan AI & Automation.
+
 ### 5.8 One Technology Partner CTA
 
 - Integrated in One System
@@ -176,6 +178,7 @@ Setiap industry solution menampilkan positioning, capability chips, dan business
 | FR-018 | Industries Served section untuk positioning sektor calon klien | Medium | Done |
 | FR-019 | Industry Solutions section detail dari infographic solusi transformasi digital | High | Done |
 | FR-020 | One Technology Partner CTA strip dengan trust/value pillars | Medium | Done |
+| FR-021 | Category filters untuk Industry Solutions section | Medium | Done |
 
 ## 7. Kebutuhan Non-Fungsional
 
