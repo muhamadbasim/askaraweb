@@ -6,6 +6,27 @@ All notable Askara Web changes are tracked here. Version changes follow SemVer w
 - **Minor**: new visible feature, new phase, or substantial enhancement.
 - **Patch**: bug fix, copy polish, metadata, or small visual refinement.
 
+## v0.4.2 — 2026-07-07
+
+### Added
+
+- First-party `robots.txt` endpoint allowing public crawling and advertising the sitemap URL.
+- First-party `sitemap.xml` endpoint with the canonical homepage URL for crawler discovery.
+- JSON-LD `Organization` and `WebSite` structured data with official company identity, address, business contact, logo, and publisher relationship.
+- Additional crawler-facing metadata including robots directives, author/publisher, keyword context, and Open Graph locale.
+
+### Changed
+
+- Expanded homepage meta description to clearly identify PT Askara Digital Technology as a Bandung-based technology company with enterprise software, app development, AI automation, cloud, data, and IT consulting services.
+- Updated release metadata and visible version badge to `v0.4.2 · SEO Reputation Signals`.
+
+### Verified
+
+- `npm run typecheck` passed.
+- `npm run build` passed and prerendered `/`, `/robots.txt`, and `/sitemap.xml`.
+- `git diff --check` passed.
+- Local Wrangler QA verified `robots.txt`, canonical `sitemap.xml`, homepage canonical URL, robots meta directives, JSON-LD organization/website schema, expanded description, and visible `v0.4.2 · SEO Reputation Signals` release badge.
+
 ## v0.4.1 — 2026-07-05
 
 ### Added

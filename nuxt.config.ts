@@ -18,8 +18,52 @@ const buildId = resolveBuildId()
 const siteUrl = 'https://askara.basim.id'
 const siteTitle = 'Askara Digital Technology'
 const siteDescription =
-  'PT Askara Digital Technology helps organizations innovate, transform, and grow through intelligent digital solutions.'
+  'PT Askara Digital Technology is a Bandung-based technology company delivering enterprise software, web and mobile apps, AI automation, cloud infrastructure, data intelligence, and IT consulting for business transformation.'
 const ogImage = `${siteUrl}/images/brand/og-askara.jpg`
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: 'PT Askara Digital Technology',
+  alternateName: 'Askara Digital Technology',
+  url: siteUrl,
+  logo: `${siteUrl}/images/brand/icon-512.png`,
+  image: ogImage,
+  description: siteDescription,
+  slogan: 'Innovate. Transform. Accelerate.',
+  foundingLocation: {
+    '@type': 'Place',
+    name: 'Bandung, Jawa Barat, Indonesia',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Jl. Sukajadi 25, Sukajadi',
+    addressLocality: 'Bandung',
+    addressRegion: 'Jawa Barat',
+    postalCode: '40162',
+    addressCountry: 'ID',
+  },
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'business inquiries',
+      email: 'info@askaradigital.com',
+      telephone: '+62-822-5811-2280',
+      areaServed: 'ID',
+      availableLanguage: ['English', 'Indonesian'],
+    },
+  ],
+  sameAs: ['https://www.askaradigital.com'],
+}
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
+  name: siteTitle,
+  publisher: { '@id': `${siteUrl}/#organization` },
+  inLanguage: 'en',
+}
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-07-03',
@@ -49,6 +93,10 @@ export default defineNuxtConfig({
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: siteDescription },
+        { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
+        { name: 'author', content: 'PT Askara Digital Technology' },
+        { name: 'publisher', content: 'PT Askara Digital Technology' },
+        { name: 'keywords', content: 'Askara Digital Technology, PT Askara Digital Technology, enterprise software development, web app development, mobile app development, AI automation, cloud infrastructure, IT consulting, Bandung technology company, Indonesia digital transformation' },
         { name: 'theme-color', content: '#071B3A' },
         { name: 'application-name', content: siteTitle },
         { property: 'og:site_name', content: siteTitle },
@@ -56,6 +104,7 @@ export default defineNuxtConfig({
         { property: 'og:description', content: siteDescription },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: siteUrl },
+        { property: 'og:locale', content: 'en_US' },
         { property: 'og:image', content: ogImage },
         { property: 'og:image:secure_url', content: ogImage },
         { property: 'og:image:type', content: 'image/jpeg' },
@@ -67,6 +116,16 @@ export default defineNuxtConfig({
         { name: 'twitter:description', content: siteDescription },
         { name: 'twitter:image', content: ogImage },
       ],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(organizationSchema),
+        },
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(websiteSchema),
+        },
+      ],
     },
   },
   nitro: {
@@ -74,5 +133,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': { prerender: true },
+    '/robots.txt': { prerender: true },
+    '/sitemap.xml': { prerender: true },
   },
 })
